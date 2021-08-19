@@ -1,0 +1,110 @@
+body {
+    margin: 0;
+}
+
+#hide {
+    position: absolute;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color:black;
+    z-index: 999;
+}
+
+#hide>button {
+    background-color: cornsilk;
+    border: 0;
+    font-family: "comic sans ms";
+    border-radius: 5px;
+    font-size: x-large;
+}
+
+#hide>button:hover {
+    animation-name: lol;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes lol {
+    0%   {background-color: red;}
+    25%  {background-color: yellow;}
+    50%  {background-color: blue;}
+    100% {background-color: green;}
+}
+
+@keyframes rotate {
+    100% {transform: rotate(360deg);}
+}
+
+@keyframes wow {
+    0% { transform: scale(1);}
+    100% { transform: scale(2);}
+}
+
+#content {
+    overflow: hidden;
+    height: 100vh;
+    width: 100vw;
+    position: relative;
+    animation-name: lol;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    display: flex;
+    justify-content: center;
+}
+#content img {
+    position: absolute;
+}
+
+#amogus {
+    right: 10%;
+    height: 25%;
+}
+
+#yeeha {
+    left: 10%;
+    top: 5%;
+    width: 25%;
+    animation-name: rotate;
+    animation-duration: 0.666s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+#boom {
+    left: 0;
+    bottom: 10%;
+    width: 25%;
+    animation-name: wow;
+    animation-duration: 0.666s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+#yay {
+    position: static !important;
+    z-index: 100;
+    width: 75%;
+    align-self: center;
+}
+
+#forme {
+    right: 5%;
+    transform: rotate(30deg);
+    bottom: 5%;
+    width: 20%;
+}
+
+#name {
+    transform: rotate(-30deg);
+    bottom: 35%;
+    left: 50%;
+    position: absolute;
+    color: darkmagenta;
+    font-weight: bold;
+    z-index: 900;
+    font-size: 100px;
+    font-family: 'comic sans ms';
+}

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Quoient ?!</title>
+</head>
+<body>
+    <audio src="./music/happy_birthday.mp3" id="song"></audio>
+    <div id="hide">
+        <button onclick="show()">clique !11!!1!</button>
+    </div>
+    <main id="content">
+        <img src="./img/among-us-twerk.gif" alt="amogus" id="amogus">
+        <img src="./img/cowboy.png" alt="yeeha" id="yeeha">
+        <img src="./img/explosion.png" alt="boom" id="boom">
+        <img src="./img/forme.jpg" alt="for me ????" id="forme">
+        <img src="./img/happybirthday.gif" alt="yay" id="yay">
+        <div id="name">V!NC€NT</div>
+    </main>
+    <script>
+        const audio = document.querySelector("#song");
+        const hide = document.querySelector("#hide");
+
+        function show() {
+            audio.play();
+            hide.style.display = "none";
+        }
+    </script>
+</body>
+</html>
