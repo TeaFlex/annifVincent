@@ -8,26 +8,61 @@
     <title>Quoient ?!</title>
 </head>
 <body>
-    <audio src="./music/happy_birthday.mp3" id="song"></audio>
     <div id="hide">
-        <button onclick="show()">clique !11!!1!</button>
+        <button onclick="handleCliccccc(this)" id="cliccccc">Clique</button>
     </div>
     <main id="content">
-        <img src="./img/among-us-twerk.gif" alt="amogus" id="amogus">
-        <img src="./img/cowboy.png" alt="yeeha" id="yeeha">
-        <img src="./img/explosion.png" alt="boom" id="boom">
-        <img src="./img/forme.jpg" alt="for me ????" id="forme">
-        <img src="./img/happybirthday.gif" alt="yay" id="yay">
-        <div id="name">V!NC€NT</div>
+        
+        <h1 id="title">AOYEUX JNNIVERSAIRE</h1>
+        <img src="./img/maidenless.jpg" alt="maidenless??????" id="maidenless">
+        <img src="./img/baba.webp" alt="baba" id="baba">
+        <img src="./img/madeline.webp" alt="madeline" id="madeline">
+        <img src="./img/gift.png" alt="KDO" id="kdo">
+        <img src="./img/steeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeve.gif" alt="stevemincraft!!!!!!!" id="steve">
+        <iframe width="0" height="0" id="video" src="https://www.youtube.com/embed/m0iMTZLQlWI" title="Parodie Minecraft - Lokoise - J'suis Sean Kévin" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
     </main>
     <script>
-        const audio = document.querySelector("#song");
+        const video = document.querySelector("#video");
         const hide = document.querySelector("#hide");
+        const maidenless = document.querySelector("#maidenless");
+
+        let count = 0;
+        let opacity = 0;
+
+        const LABELS = [
+            "Clique !",
+            "Non ici !",
+            "mais bon sang",
+            ">:(((((",
+            "ptdrrrr azy",
+            "bon, dernière chance"
+        ];
+
+        const startVideo = () => {video.src += "?autoplay=1"};
 
         function show() {
-            audio.play();
+            startVideo();
             hide.style.display = "none";
+            setInterval(() => {
+                maidenless.style.opacity = opacity/100;
+                if(opacity < 100)
+                    opacity+=0.44;
+            },1 * 1000);
         }
+
+        const getRandom = (min = 0, max = 90) => Math.random() * (max - min) + min;
+
+        const handleCliccccc = (cliccccc) => {
+            if(count < LABELS.length) {
+                cliccccc.style.top = `${getRandom()}%`;
+                cliccccc.style.left = `${getRandom()}%`;
+                cliccccc.innerText = LABELS[count];
+                count++;
+            }
+            else {
+                show();
+            }
+        };
     </script>
 </body>
 </html>
